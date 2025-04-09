@@ -95,10 +95,10 @@
         Telegram.WebApp.ready();
 
         const startParam = Telegram.WebApp.initDataUnsafe.start_param;
-
+        text=startParam.split(".");
         if (startParam) {
           const receivedData = decodeURIComponent(startParam);
-          alert("Received data from App A:", receivedData);
+          alert("Received data from App A:", text[1]);
         // You can now display or process the data in App B
         }
     </script>
